@@ -38,4 +38,3 @@ const getAscii = (arr) => {
 }, arr4 = populate(new Array(getRandom()), 255, 0);
 console.log(`Input:`, arr4);
 console.log(`Output:`, getAscii(arr4));
-arr4.fill();
