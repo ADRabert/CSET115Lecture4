@@ -35,6 +35,7 @@ const getAscii = (arr) => {
 	const map = new Map();
 	arr.forEach(element => { map.set(element, String.fromCharCode(element)); });
 	return Array.from(map);
-}, arr4 = populate(new Array(getRandom()));
+}, arr4 = populate(new Array(getRandom()), 255, 0);
 console.log(`Input:`, arr4);
 console.log(`Output:`, getAscii(arr4));
+arr4.fill();
