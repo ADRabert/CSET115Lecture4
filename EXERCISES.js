@@ -8,16 +8,14 @@ const getRandom = (max = 10, min = 1) => {
 	return arr;
 }, removeEven = (arr) => {
 	return arr.filter(element => element % 2 === 1);
-}, arr1 = new Array(getRandom());
-populate(arr1);
+}, arr1 = populate(new Array(getRandom()));
 console.log(`Input:`, arr1);
 console.log(`Output:`, removeEven(arr1));
 
 console.log(`\nExercise 2: Remove duplicate values from array`);
 const removeDupes = (arr) => {
 	return Array.from(new Set(arr));
-}, arr2 = new Array(getRandom());
-populate(arr2);
+}, arr2 = populate(new Array(getRandom()));
 console.log(`Input:`, arr2);
 console.log(`Output:`, removeDupes(arr2));
 
@@ -27,8 +25,7 @@ const check = (arr, max = 10, min = 1) => {
 	while (isNaN(input) || input < min || input > max);
 	if (arr.indexOf(input) === -1) return false;
 	return true;
-}, arr3 = new Array(getRandom());
-populate(arr3);
+}, arr3 = populate(new Array(getRandom()));
 console.log(`Input:`, arr3);
 console.log(`Output:`, check(arr3));
 
@@ -38,7 +35,6 @@ const getAscii = (arr) => {
 	const map = new Map();
 	arr.forEach(element => { map.set(element, String.fromCharCode(element)); });
 	return Array.from(map);
-}, arr4 = new Array(getRandom());
-populate(arr4, 255, 0);
+}, arr4 = populate(new Array(getRandom()));
 console.log(`Input:`, arr4);
 console.log(`Output:`, getAscii(arr4));
